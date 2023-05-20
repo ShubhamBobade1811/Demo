@@ -1,0 +1,41 @@
+<h1>Angular Directives</h1>
+<div *ngIf="names.length>0, else abc">
+  <div *ngFor="let n of names, index as f" >
+    <!-- <div *ngIf="f">
+      {{n}}
+    </div> -->
+  
+    <!-- {{f}} - {{n}} -->
+
+    {{n}}
+  
+  
+  </div>
+</div >
+  <ng-template #abc>Array is empty</ng-template>
+
+
+  <h1>ngSwitch</h1>
+  Enter name : <input type="text" [(ngModel)]="userChoice">
+
+  <div [ngSwitch]="userChoice">
+
+    <div *ngSwitchCase="'shubham'">
+      Shubham
+    </div>
+
+    <div *ngSwitchCase="'aarav'">
+      aarav
+    </div>
+
+    <div *ngSwitchDefault="">
+      Wrong Input
+    </div>
+    
+    
+  </div>
+
+
+  <div [ngStyle]="{'color': 'red'}">Angular App</div>
+
+  
